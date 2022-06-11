@@ -18,49 +18,80 @@ body {
 
 
 /* 1. nav */
+
 header{
     display: flex;
     flex-direction: column;
+    background-color: black; 
 }
 
-nav{
-    position: fixed;
-}
-.nav-container{
+
+.nav-container {
+    /* position: fixed; for a fixed banner*/
+    background-color:white;  
+    height: 70px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-width: 100%;
-    min-height: 200px;
-    background-color: seashell;
-    flex-wrap: wrap;
-    z-index: 999;
 }
 
-.title-container{
+.nav-content{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.title-container h1{
-    font-size: 2.5rem;
+.banner-links{
+    
 }
 
-.links-container{
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-}
-
-.links-container a{
-   color: black;
-   font-size: 1.5rem;
-}
-
-.links-container a:hover{
-    color: grey;
+.banner-links a{
+    color: black;
+    margin: 10px;
     text-decoration: none;
+    font-weight: bold;
 }
+.banner-links a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+                            /* banner - buttons */
+.sign-in a{
+    background-color: white;
+    border: solid 1px red;
+    color: red;
+    padding: 10px 20px 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-shadow: 10px;
+    box-shadow: 10px 5px 5px lightgray;
+    margin-left: 550px;
+   
+}
+
+.sign-in a:hover{
+    border: solid 2px red;
+    text-decoration: none; 
+}
+
+
+.sign-up a{
+    background-color: red;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-shadow: 10px;
+    box-shadow: 10px 5px 5px lightgray;
+    margin-left: 15px;
+}
+
+.sign-up a:hover{
+    background-color: rgb(204, 5, 5);
+    text-decoration: none; 
+}
+
+
 
 /* 2. mission statement */
 
@@ -73,8 +104,8 @@ nav{
     align-items: center;
     background-image: url(../resources/photos/beach.webp);
     background-position: bottom;
-    margin-top: 200px;
     background-size: cover;
+    /* margin-top: 70px; erase for the fixed banner */
 }
 
 .mission-items{
@@ -135,8 +166,7 @@ p{
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 30px;
-
-    
+    box-shadow: 10px 5px 5px lightgray;    
 }
 
 .one{
@@ -155,12 +185,20 @@ p{
     background-image: url(../resources/photos/couple.webp);
 }
 
+
 .package h3{
     color: white;
     background-color: red;
     margin-bottom: 0px;
     text-decoration: underline;
 }
+
+
+.package h3:hover{
+    background-color: rgb(220, 0, 0); 
+    text-decoration: none;
+}
+
 /* 4. teammates */
 
 .team-title-container{
