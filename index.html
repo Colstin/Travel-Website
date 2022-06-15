@@ -10,15 +10,18 @@
   <body>
     <header> 
       <nav class="nav-container">
-        <div class = nav-content> 
-          <p>Xplore Travel</p>  
-          <div class="banner-links"> 
-              <a href="#"> Packages</a>
-              <a href="#portfolio-products"> Portfolio</a>
-              <a href="#teammates"> Our Team</a> 
+          <div class="Xplore-home">
+            <a href="../Travel Website/index.html">Xplore Travel</a>
           </div>
-          <div class= sign-in> <a href="#"> Sign in </a> </div>
-          <div class= sign-up> <a href="#"> Sign up </a>  </div>
+          <div class="banner-links"> 
+            <a href="#"> Packages</a>
+            <a href="#portfolio-products"> About Us</a>
+            <a href="#teammates"> Our Team</a> 
+          </div>
+          <div class="login">
+            <div class= sign-in> <a href="#" id="sign-in-nav"> Sign in </a> </div>
+            <div class= sign-up> <a href="#"> Sign up </a>  </div>
+          </div>
         </div>          
      </nav>
      
@@ -29,7 +32,7 @@
         </div>
       </div>    
     </header>
-                            <!--- Links are below -->
+                            <!--- Travel Packages-->
     <section id="portfolio-products">
         <div class="image-title-container"> 
             <div class="image-title-items"> 
@@ -45,7 +48,7 @@
         </div>
     </section>
 
-
+                            <!-- Team members-->
     <section id="teammates">
         <div class="team-title-container">
             <div class="team-item">
@@ -87,5 +90,57 @@
             <p> © xplore travel 2022</p>
         </div>
     </footer>
+<!-- Sign in Nav button Modal-->
+    <div class="popup">
+      <div class="popup-content">
+        <div class="close-button-section">Sign in
+          <div class="close-button">&times;</div>
+        </div>  
+        <form method="post">
+          <div class="sign-in-submit-button">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required> 
+            <input type="submit" name="submit" value="Sign in"/>
+          </div>
+        </form>
+        <a href="#" class="forgot-password-send">Forgot Password?</a>
+          <br>
+          <hr>
+        <div class="Dont-have-account">
+          <p>Don't have an account? </p>
+          <a href="#" id="dont-have-create-one">Create one</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign un Nav button Modal-->
+    <div class="popup-2">
+        <div class="popup-content-2">
+          <div class="close-button-section">Create an account
+            <div class="close-button-2">&times;</div>
+          </div>  
+          <form method="post">
+            <div class="sign-up-submit-button">
+              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="Last Name" required> 
+              <input type="email" placeholder="Email" required> 
+              <input type="password" id="create-password" placeholder="Password" pattern=".{8,}"  required title="8 characters minimum"> 
+              <label for="create-password" id="sign-up-password-label"> (minimum 8 characters)</label> <br>
+              <input type="submit" id ="sign-up-submit" name="submit" value="Sign up"/>
+            </div>
+          </form>
+            <br>
+            <hr>
+          <div class="already-have-account">
+            <p>Already have an account? </p>
+            <a href="#" id="already-have-sign-in">Sign in</a>
+          </div>
+        </div>
+      </div>
+  
+
+
+  <script src="popup.js"></script>
+
   </body>
 </html>
