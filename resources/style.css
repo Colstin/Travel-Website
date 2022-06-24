@@ -15,6 +15,7 @@ body {
     padding: 0;
     font-size: 16px;
     color: black;
+    font-family:'Open Sans', sans-serif;;
 }
 
 
@@ -30,7 +31,9 @@ header{
 .nav-container{
     /* position: fixed; for a fixed banner*/
     background-color:white;  
-    height: 70px;
+    min-height: 70px;
+    width: 100%;
+    min-width: 100%;
     display: flex; 
     align-items: center;
     flex-wrap: wrap;
@@ -147,6 +150,10 @@ hr{
     border: 2px solid red;
     text-decoration: underline;
 }
+
+
+
+
 /* 2. mission statement */
 
 .mission-container{
@@ -156,8 +163,8 @@ hr{
     justify-content: center;
     align-content: center;  
     align-items: center;
-    background-image: url(../resources/photos/beach.webp);
-    background-position: bottom;
+    background-image: url("https://source.unsplash.com/random/?travel");
+    background-position: center;
     background-size: cover;
     /* margin-top: 70px; erase for the fixed banner */
 }
@@ -165,12 +172,21 @@ hr{
 .mission-items{
     width: 100%;
     height: fit-content;
-    background-color: seashell;
+    background-color: #000000d0;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 2px;
 }
-  
-h2, p{
+
+h2{ 
+    font-size: 21px;
+    text-align: center;
+
+}
+
+ .mission-items p{
     text-align: center; 
-    font-size: 2rem;
+    font-size: 15px;
     margin: auto 20px auto 20px; 
     
 }
@@ -223,6 +239,12 @@ p{
     box-shadow: 10px 5px 5px lightgray;    
 }
 
+.package:hover{
+    cursor: pointer;   
+    width: 260px;
+    height: 210px;
+}
+
 .one{
     background-image: url(../resources/photos/car.webp);
 }
@@ -250,6 +272,10 @@ p{
 
 .package h3:hover{
     background-color: rgb(220, 0, 0); 
+    text-decoration: none;
+}
+
+.package a{
     text-decoration: none;
 }
 
@@ -310,8 +336,11 @@ footer{
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: center;  
+    text-align: center;
 }
+
+
 
 /* 6. Modals (pop up widows) */
 
@@ -361,7 +390,7 @@ footer{
     display: block;
     width: 80%;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid gray;
 }
 
@@ -415,19 +444,20 @@ input[type="submit"]:hover{
 
 .already-have-account{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.already-have-account a{
+#already-have-sign-in{
     background-color: white;
+    height: fit-content;
     border: solid 1px red;
     color: red;
     padding: 10px 20px 10px 20px;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
     text-shadow: 10px;
-    box-shadow: 10px 5px 5px lightgray;
-   /* margin-left: 500px; */
-   
+    box-shadow: 10px 5px 5px lightgray;  
 }
 
 .already-have-account a:hover{
@@ -439,3 +469,99 @@ input[type="submit"]:hover{
     width: 70%;
 }
 
+/* This is for the weather api modal */
+
+.popup-3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;    /*setting this to flex will make it appear */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.popup-content-3{
+    height: 500px;
+    width: 400px;
+    background: rgba(0, 2, 84, 0.8);
+    color: white;
+    border-radius: 20px;
+    position: fixed;
+}
+
+.icon{
+    height: 25px;
+    width: 25px;
+}
+
+.close-button-section-3{    /* close button section will work for both sign in/up*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px;
+    background: rgba(0, 2, 84, 0.8);
+    padding: 20px; 
+    border-radius: 20px 20px 0 0;  
+    border-bottom: 1px solid white;
+}
+
+.close-button-3{
+    cursor: pointer;
+}
+
+.search{
+    margin-top: 10%;
+}
+
+.display{
+   
+    text-align: center;
+    line-height: 15px;
+}
+
+.city-name{
+    font-size: 20px;
+}
+
+.temp{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.icon{
+    margin: 60px 0 0 0;
+    height: 100px;
+    width: 100px;
+}
+
+#cityInput{
+    width: calc(100% - 100px);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.688);
+    color: black;
+    font-size: 20px;
+}
+
+button{
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.688);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+}

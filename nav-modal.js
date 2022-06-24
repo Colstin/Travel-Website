@@ -1,4 +1,4 @@
-// to open the sign in modal on Home Nav
+//1. to open the sign in modal on Home Nav
 document.getElementById("sign-in-nav").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "flex";
 })
@@ -23,7 +23,7 @@ document.querySelector(".close-button-2").addEventListener("click", function(){
 
 
 
-//If you click on sign in button in the Modal it will close .popup-2 then open .popup
+//2. If you click on sign in button in the Modal it will close .popup-2 then open .popup
 document.getElementById("already-have-sign-in").addEventListener("click", function(){
     document.querySelector(".popup-2").style.display = "none";
  })
@@ -33,8 +33,7 @@ document.getElementById("already-have-sign-in").addEventListener("click", functi
  })
 
 
-
-//If you click on Create one button in the Modal it will close .popup then open .popup-2
+//3. If you click on Create one button in the Modal window it will close .popup then open .popup-2
 document.getElementById("dont-have-create-one").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
  })
@@ -45,7 +44,13 @@ document.getElementById("dont-have-create-one").addEventListener("click", functi
 
 
 
+// 4. Open and close weather app
+document.getElementById("open-weather-api").addEventListener("click", function(){
+    document.querySelector(".popup-3").style.display = "flex";
+})
+
+document.querySelector(".close-button-3").addEventListener("click", function(){
+    document.querySelector(".popup-3").style.display = "none";
+})
 
 
- /* I put a ID(sign-in-nav) and a class(sign-in) in the HTML, you can use either
-   one. To use the class substitute the getElementById to querySelector... thats it. */
